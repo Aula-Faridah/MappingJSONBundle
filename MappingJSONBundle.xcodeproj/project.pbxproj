@@ -12,6 +12,8 @@
 		52D052582BD89BC400337715 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D052572BD89BC400337715 /* Assets.xcassets */; };
 		52D0525B2BD89BC400337715 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D0525A2BD89BC400337715 /* Preview Assets.xcassets */; };
 		52D052662BD89CCF00337715 /* Colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 52D052652BD89CCF00337715 /* Colors.json */; };
+		52D052692BD89D5000337715 /* ColorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D052682BD89D5000337715 /* ColorData.swift */; };
+		52D0526B2BD8A11500337715 /* ColorFromHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D0526A2BD8A11500337715 /* ColorFromHex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		52D052572BD89BC400337715 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52D0525A2BD89BC400337715 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52D052652BD89CCF00337715 /* Colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Colors.json; sourceTree = "<group>"; };
+		52D052682BD89D5000337715 /* ColorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorData.swift; sourceTree = "<group>"; };
+		52D0526A2BD8A11500337715 /* ColorFromHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorFromHex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 		52D052522BD89BC300337715 /* MappingJSONBundle */ = {
 			isa = PBXGroup;
 			children = (
+				52D052672BD89D3500337715 /* Model */,
 				52D052612BD89BD300337715 /* App */,
 				52D052622BD89BD800337715 /* View */,
 				52D052632BD89BDF00337715 /* Resources */,
@@ -100,6 +105,15 @@
 				52D052652BD89CCF00337715 /* Colors.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		52D052672BD89D3500337715 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52D052682BD89D5000337715 /* ColorData.swift */,
+				52D0526A2BD8A11500337715 /* ColorFromHex.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,7 +188,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				52D052562BD89BC300337715 /* ContentView.swift in Sources */,
+				52D0526B2BD8A11500337715 /* ColorFromHex.swift in Sources */,
 				52D052542BD89BC300337715 /* MappingJSONBundleApp.swift in Sources */,
+				52D052692BD89D5000337715 /* ColorData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
