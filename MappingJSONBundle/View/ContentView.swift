@@ -8,17 +8,41 @@
 import SwiftUI
 
 struct ContentView: View {
+    let colorData = ColorData.loadColorData()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List{
+                ForEach(colorData) { datum in
+                    ColorRow(items: datum)
+                }
+            }
+            .navigationTitle("Color")
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+}
+
+struct ColorRow: View {
+    var items: ColorData
+    var body: some View {
+        
+        HStack(spacing: 16){
+            items.uiImage
+                .resizable()
+                .scaledToFit()
+                .frame(width: 50, height: 50)
+                .padding()
+                .background(items.uiColor)
+                .clipShape(RoundedRectangle(cornerRadius: 16))
+                .foregroundStyle(.white)
+            
+            Text(items.name)
+                .font(.title)
+                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+        }
+    }
 }
